@@ -7,7 +7,8 @@
 # you're doing.
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
-  config.vm.provision "shell", path: "docker_install.sh"
+  config.vm.provision "shell", path: "vim_install.sh"
+  # config.vm.provision "shell", path: "docker_install.sh"
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
