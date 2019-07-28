@@ -36,7 +36,7 @@ Install Docker CE via Shell provisioning
 
     $ Vagrant.configure("2") do |config| 
        config.vm.box = "Centos7"
-       config.vm.provision "shell", path: "vim_install.sh
+       config.vm.provision "shell", path: "docker_install.sh
 
 Install Vim Editor provisioning
 
