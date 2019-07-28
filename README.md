@@ -34,19 +34,19 @@ SSH to your vagrant Box
 
 Install Docker CE via Shell provisioning
 
-$ Vagrant.configure("2") do |config|
-    config.vm.box = "centos/7"
-    config.vm.provision "shell", path: "vim_install.sh
+    $ Vagrant.configure("2") do |config| 
+       config.vm.box = "Centos7"
+       config.vm.provision "shell", path: "vim_install.sh
 
 Install Vim Editor provisioning
 
- $ Vagrant.configure("2") do |config|
-    config.vm.box = "centos/7"
-    config.vm.provision "shell", path: "vim_install.sh"
+    $ Vagrant.configure("2") do |config|
+      config.vm.box = "centos/7"
+      config.vm.provision "shell", path: "vim_install.sh"
 
 Install Ansible via Shell provisionning
 
-  $ Vagrant.configure("2") do |config|
-    config.vm.box = "centos/7"
-    config.vm.provision "shell", path: "ansible_install.sh"
+    $ Vagrant.configure("2") do |config|
+      config.vm.box = "centos/7"
+      config.vm.provision "shell", path: "ansible_install.sh"
   
