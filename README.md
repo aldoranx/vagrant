@@ -1,41 +1,51 @@
-#Vagrantfile-v2
+Vagrantfile
 
-#Prerequisites You'll need to have the following prerequisites installed on your workstation:
+Prerequisites You'll need to have the following prerequisites installed on your workstation:
 
-#Install Vagrant:
+Install Vagrant:
+
 https://www.vagrantup.com/intro/getting-started/install.html
 
-#Projet Setup:
+Projet Setup:
+
 https://www.vagrantup.com/intro/getting-started/project_setup.html
 
-#Install a Box
+Install a Box
+
  $ vagrant box add Centos/7
 
-#Create a base Vagrantfile
+Create a base Vagrantfile
+
  $ vagrant init Centos7
 
-#Using a Box for that open the Vagrantfile and change the contents to the following:
+Using a Box for that open the Vagrantfile and change the contents to the following:
+
  $ Vagrant.configure("2") do |config| 
     config.vm.box = "Centos7"
    end
 
-#Start Vagrant Box
+Start Vagrant Box
+
 $ vagrant up   
 
-#SSH to your vagrant Box
+SSH to your vagrant Box
+
  $ vagrant ssh  
 
-#Install Docker CE via Shell provisioning
+Install Docker CE via Shell provisioning
+
 $ Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
   config.vm.provision "shell", path: "vim_install.sh
 
-#Install Docker CE via Vié Editor provisioning
+Install Vim Editor provisioning
+
  $ Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
   config.vm.provision "shell", path: "vim_install.sh"
 
-#Install Ansible via Shell provisionning
+Install Ansible via Shell provisionning
+
   $ Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
   config.vm.provision "shell", path: "ansible_install.sh"
