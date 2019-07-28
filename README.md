@@ -6,47 +6,33 @@ Install Vagrant:
 
 https://www.vagrantup.com/intro/getting-started/install.html
 
-Projet Setup:
+Create a project directory qnd switch to it
 
-https://www.vagrantup.com/intro/getting-started/project_setup.html
+    $ mkdir vagrant
+    $ cd vagrant
 
-Install a Box
+Create a Vagrant File with the commande vagrant init. This commandd will generate a VagrantFile ready to use
+
+    $ vagrant init centos/7
+
+Install a Box. Yhen lauching this command you will be able to choose your provider Hyper-Vm VirtualVox or VMware.
 
     $ vagrant box add Centos/7
 
-Create a base Vagrantfile
-
-    $ vagrant init Centos7
 
 Using a Box for that open the Vagrantfile and change the contents to the following:
 
     $ Vagrant.configure("2") do |config| 
-       config.vm.box = "Centos7"
+       config.vm.box = "Centos/7"
    end
 
-Start Vagrant Box
+Start Vagrant Box. This commande will start the VM on the selected provider that you choose in the previous step
 
     $ vagrant up   
 
-SSH to your vagrant Box
+Once your VM is up use SSH to connect to your vagrant Box 
 
     $ vagrant ssh  
 
-Install Docker CE via Shell provisioning
-
-    $ Vagrant.configure("2") do |config| 
-       config.vm.box = "Centos7"
-       config.vm.provision "shell", path: "docker_install.sh
-
-Install Vim Editor provisioning
-
-    $ Vagrant.configure("2") do |config|
-      config.vm.box = "centos/7"
-      config.vm.provision "shell", path: "vim_install.sh"
-
-Install Ansible via Shell provisionning
-
-    $ Vagrant.configure("2") do |config|
-      config.vm.box = "centos/7"
-      config.vm.provision "shell", path: "ansible_install.sh"
+Now to install Docker-CE, Ansible and VIM Editor please refare to the Vagrant Files yhere all the commands will be liste in order to install those software.
   
