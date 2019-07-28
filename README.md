@@ -12,41 +12,41 @@ https://www.vagrantup.com/intro/getting-started/project_setup.html
 
 Install a Box
 
- $ vagrant box add Centos/7
+    $ vagrant box add Centos/7
 
 Create a base Vagrantfile
 
- $ vagrant init Centos7
+    $ vagrant init Centos7
 
 Using a Box for that open the Vagrantfile and change the contents to the following:
 
- $ Vagrant.configure("2") do |config| 
-    config.vm.box = "Centos7"
+    $ Vagrant.configure("2") do |config| 
+       config.vm.box = "Centos7"
    end
 
 Start Vagrant Box
 
-$ vagrant up   
+    $ vagrant up   
 
 SSH to your vagrant Box
 
- $ vagrant ssh  
+    $ vagrant ssh  
 
 Install Docker CE via Shell provisioning
 
 $ Vagrant.configure("2") do |config|
-  config.vm.box = "centos/7"
-  config.vm.provision "shell", path: "vim_install.sh
+    config.vm.box = "centos/7"
+    config.vm.provision "shell", path: "vim_install.sh
 
 Install Vim Editor provisioning
 
  $ Vagrant.configure("2") do |config|
-  config.vm.box = "centos/7"
-  config.vm.provision "shell", path: "vim_install.sh"
+    config.vm.box = "centos/7"
+    config.vm.provision "shell", path: "vim_install.sh"
 
 Install Ansible via Shell provisionning
 
   $ Vagrant.configure("2") do |config|
-  config.vm.box = "centos/7"
-  config.vm.provision "shell", path: "ansible_install.sh"
+    config.vm.box = "centos/7"
+    config.vm.provision "shell", path: "ansible_install.sh"
   
