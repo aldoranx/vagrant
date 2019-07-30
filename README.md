@@ -20,11 +20,10 @@ Install a Box. When running this command you will be able to choose your provide
     $ vagrant box add Centos/7
 
 
-In your VagrantFile you can add your VM box before doing a vagrat up.
+In your VagrantFile you can add your VM box before doing a vagrant up.
 
     $ Vagrant.configure("2") do |config| 
        config.vm.box = "Centos/7"
-   end
 
 Start Vagrant Box. This commande will start the VM on the selected provider that you choose in the previous step
 
@@ -44,7 +43,7 @@ When you yill add your .sh file in your VagrantFile to run your scripts in order
 
     $ vagrant  provision
 
-To stop a VMrun the command
+To stop a VM run the command
 
     $ vagrant  halt
 
