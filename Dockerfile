@@ -1,14 +1,10 @@
-    
 #
-# Debian Jessie + Nginx webserver base dev & test image.
+# Debian-sshcd Debian Jessie + Nginx webserver and OpenSSH Server
 #
-# Build: docker build -t gedco:jessie-nginx --pull --rm .
-# Usage: docker run --name nginx-testapp -p 8080:80 -d -it \
-#                   -v $(pwd)/logs:/var/log/nginx/ -v $(pwd)/src:/usr/share/nginx/html/ \
-#                   -v $(pwd)/nginx:/etc/nginx/conf.d/ gedco:jessie-nginx
-# Clean: docker stop nginx-testapp
+# Build: sudo docker build .
+# Usage: docker run -d -p 8080:80 -p 2222:22 -e SSH_KEY="$(cat ~/.ssh/id_rsa.pub)" "Container ID"
 #
-FROM debian:jessie
+FROM krlmlr/debian-sshcd
 
 # Mark this system as noninteractive.
 ENV DEBIAN_FRONTEND noninteractive
